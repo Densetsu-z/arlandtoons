@@ -1,0 +1,50 @@
+.shortStoriesPage{
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 6vh 4fr 1fr;
+}
+/* جميع العناصر في وسط الصفحة داخل هذا العنصر */
+.content{
+    grid-area: 3/1/4/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 2%;
+    margin: 4%;
+}
+.content > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem 1fr 3rem;
+    box-shadow: 0px 7px 6px 0px #00000021;
+    padding: 1rem;
+}
+.content > div > div:nth-child(1){
+    grid-area: 1/1/-1/-1;
+}
+.content > div > div:nth-child(2){
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: end;
+    column-gap: 0.5vh;
+    width: 10vh;
+}
+.content > div > div:nth-child(3 ){
+    display: grid;
+    grid-area: 2/2/3/3;
+    font-size: 1.1vh;
+    text-align: end;
+    align-items: center;
+}
+.content > div > div:nth-child(4){
+    grid-area: 3/2/4/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.2vh;
+}
+img{
+    max-width: 50%;
+    height: auto;
+}

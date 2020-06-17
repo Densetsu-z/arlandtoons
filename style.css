@@ -1,0 +1,441 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+/* المتغيرات */
+:root{
+    --sml-menu-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    --web-seit-font: 'Droid Arabic Kufi', serif;
+    --web-seit-fontseiz : 1.2vh;
+}
+a{
+    text-decoration: none;
+}
+/* كلاس زر كتابة و ايقونة */
+.buttonIcon{
+    display: grid;
+    /* width: 25%; */
+    background-color: #5380f3;
+    grid-template-columns: 1fr 1.5fr;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+/* كلاس زر ايقونة */
+.icon {
+    background-color: #5380f3;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    color: white;
+    font-size: 2vh;
+    cursor: pointer;
+}
+.background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #670cff75;
+    text-align: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-color: #f9f9f9;
+    font-family: var(--web-seit-font);
+    font-size: var(--web-seit-fontseiz);
+}
+/* الصفحة الرئيسية بداية الكود  */
+.homePage{
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4vh auto 6vh 6fr 2fr;
+}
+/* القائمة الصغيرة اعلا الصفحة */
+.miMenu{
+    display: grid;
+    grid-area: 1/1/2/-1;
+    background-color: #151515;
+    grid-template-columns: 1fr 1fr 1fr 3vh 3vh;
+    color: #d9d9d9;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.miMenu > div:nth-child(1){
+    display: grid;
+    justify-items: center;
+}
+
+/* شعارات التواصل اعلا الصفحة */
+.miMenu > div:nth-child(2){
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+/* لون شعارات التواصل اعلى الصفحة */
+.miMenu > div > a {
+    color: white;
+}
+/* هوفر لشعارات التواصل اعلا الصفحة */
+.miMenu > div > a > i:hover{
+    color: #008cff;
+}
+.logInButton {
+    display: grid;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    grid-gap: 1vh;
+}
+.logInButton > div{
+    border-radius:8px;
+    padding:4px;
+    background:linear-gradient(90deg, #1cbce8 0%, #0068ff 100%); 
+    width: 12vw ; 
+    text-align: center;
+    cursor: pointer;
+}
+/* العنصر لتحكم بمكان الصورة  */
+.homeImg{
+    grid-area: 2/1/3/-1;
+    padding: 0;
+    margin: 0;
+} 
+/* صورة اعلا القائمة الرئيسية */
+.homeImg > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*  العنصر لتحكم بمكان القائمة الرئيسية */
+.menu{
+    display: grid;
+    background-color: #ff8400;
+    grid-template-rows: 1fr;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+/* العناصر داخل القائمة الرئيسية  */
+.menu > menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.menu > menu > a{
+    display: grid;
+    grid-gap: 2px;
+    align-content: center;
+    color: white;
+}
+
+.menu > menu > a:hover{
+    background-color: whitesmoke;
+    color: #171717;
+}
+
+h1{
+    grid-area: 2/1/3/-1;
+    justify-self: center;
+    align-self: center;
+    color: white;
+    font-size: 5vh;
+}
+
+/* جميع العناصر في وسط الصفحة داخل هذا العنصر */
+.homeContent{
+    grid-area: 4/1/5/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+    /* column-gap: 4rem; */
+    /* justify-items: center;
+    align-items: center; */
+}
+
+/* بوكس لعرض اخر الاخبار */
+.newes{
+    display: grid;
+    width: 100%;
+    grid-area: 4/1/5/-1;
+    font-size: 1vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 0;
+    background-image: none;
+    background-color: #151515;
+    color: #f5f5f5;
+    text-align: end;
+}
+.newes > div:nth-child(2){
+    grid-area: 1/2/3/-1;
+    background-color: #171717;
+    margin: 2rem;
+    border-radius: 8px;
+}
+.newes > div > img{
+    width: 100%;
+    height: auto;
+}
+
+.BoxText{
+    display: grid;
+    background: linear-gradient(90deg, #3dbaff 0%, #588dff 45%, #8d3aff 100%);
+    box-shadow: -1px 6px 20px 0px #0000002e;
+    border-radius: 8px;
+    font-size: 1vw;
+    color: white;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    grid-row-end: 3;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    cursor: pointer;
+}
+
+.BoxText:hover{
+    /* background: linear-gradient(90deg, #8d3aff 0%, #588dff 45%, #3dbaff 100%); */
+    background: #141414;
+    border-radius: 16px;
+    box-shadow:-1px 6px 20px 0px #00a4ff;
+}
+.BoxText > i{
+    color: #008cff;
+    background-color: #eee;
+    border-radius: 100%;
+    padding: 2vh;
+}
+.exMenu{
+    display: grid;
+    background-color: #f9f9f966;
+    position: absolute;
+    grid-area: 1/1/2/-1;
+    width: 100vw;
+    height: 100vh;
+}
+/* شريط التواصل */
+.contact {
+    display: grid;
+    grid-area: 6/1/5/-1;
+    background-color: #1e1e1e;
+    color: #9f9f9f;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 6fr 1fr;
+    font-size: 1.5vh;
+}
+/* القسم الايسر من شريط التواصل */
+.contact > div:nth-child(1){
+    grid-area: 1/1/-2/2;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: end;
+    grid-gap: 1vh;
+}
+/* النصف من شريط التواصل */
+.contact > div:nth-child(2){
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    text-align: end;
+    grid-gap: 3vh;
+}
+/* القسم الايمن من شريط التواصل */
+.contact > div:nth-child(3){
+    grid-area: 1/-2/-2/-1;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: end;
+    grid-gap: 1vh;
+}
+.contact > div:nth-child(3) > div{
+    color: white;
+    margin: 1rem;
+}
+.contact > div:nth-child(2) > a {
+    color: white;
+    margin: 1rem;
+}
+.contact > div > div > h4 {
+    margin: 0;
+}
+/* شريط النهاية  */
+.contact > div:nth-child(4){
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #151515;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* خلفية عنصر يحتوى على النصوص مخفية  */
+.textImp{
+    background-color: #8c00ff9b;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+/* خلفية عنصر يحتوى على النصوص مخفية  */
+.textImp > div{
+    background-color: white;
+    height: 70%;
+    width: 90%;
+    position: fixed;
+    grid-template-columns: 2rem 1fr 1fr 2rem;
+    grid-template-rows: 2rem 3fr 1fr 2rem 1fr 2rem 2fr 2fr 2rem;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1vh;
+}
+/*  الصفحة الرئيسية نهاية الكود  */
+
+/*  اتسجيل الدخول  */
+.logIn{
+    display: none;
+    grid-template-columns: 2vh 1fr 1fr 2vh;
+    grid-template-rows: 2vh 3fr 1fr 2vh 1fr 2vh 2fr 2fr 2vh;
+    position: fixed;
+    width: 55vh;
+    height: 45vh;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1vh;
+}
+
+.logIn > h2 {
+    grid-area: 2/2/3/-2;
+    display: grid;
+    align-self: center;
+}
+
+.logIn > div:nth-child(2) {
+    grid-area: 3/2/4/-2;
+    justify-self: center;
+    align-self: center;
+}
+
+.logIn > input:nth-child(3) {
+    grid-area: 5/2/6/3;
+}
+
+.logIn > input:nth-child(4) {
+    grid-area: 5/3/6/4;
+}
+
+.logIn > div:nth-child(5) {
+    grid-area: 7/2/8/-2;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+    padding: 1vh;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #00a4ff 0%, #008ff2 45%, #8d3aff 100%);
+}
+.logIn > div:nth-child(6) {
+    grid-area: 8/2/9/-2;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+.logIn > div:nth-child(7) {
+    grid-area: 2/-3/2/-2;
+    justify-self: end;
+    align-self: start;
+    cursor: pointer;
+    padding: 1vh;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #00a4ff 0%, #008ff2 45%, #8d3aff 100%);
+}
+.logIn > input {
+    border-style: none;
+    border-radius: 8px;
+    box-shadow: 3px 3px 4px 0px #d9d9d9;
+    width: 95%;
+    justify-self: center;
+    text-align: center;
+}
+.TextBox{
+    display: none;
+    grid-template-columns: 2vh 1fr 2vh;
+    grid-template-rows: 2vh 5vh 1fr 2vh 2vh;
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1vh;
+}
+/* ///////////  الحساب  /////////////////// */
+/*  خلفية قائمة الحساب */
+.account{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: #220a42c4;
+    padding: 0;
+    margin: 0;
+}
+.account > div {
+    display: grid;
+    justify-items: center;
+    width: 90%;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.account > div:nth-child(1) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.account > div >div {
+    height: 6vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+/* صورة الشخصية للحساب */
+.account > div > img{
+    max-width:180px;
+}
+input[type=file]{
+  padding:10px;
+  background:#2d2d2d;
+}
+.accountBack{
+    display: none;
+}

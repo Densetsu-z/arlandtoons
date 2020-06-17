@@ -1,0 +1,41 @@
+
+.storePage{
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4vh 6vh 4fr 1fr;
+}
+
+/* جميع العناصر في وسط الصفحة داخل هذا العنصر */
+.content{
+    grid-area: 3/1/4/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2%;
+    margin: 4%;
+}
+.content > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 16%;
+    grid-gap: 2%;
+    margin: 4%;
+}
+.content > div > a {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+    color: white;
+}
+.content > div > a > div {
+    grid-area: 1/2/2/3;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
